@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    height: 100vh;
+    width: 100%;
+    background-color: #011925;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+}
+
+.box {
+    height: 600px;
+    width: 450px;
+    background-color: #052a3f;
+    border-top: 3rem solid #04a7f4;
+    padding: 2rem;
+}
+
+.box h1 {
+    display: inline-block;
+    transform: translate(10%);
+    font-size: 1.7rem;
+    margin-top: 2rem;
+    margin: 2rem 0;;
+    border-bottom: 2px solid 
+}
+
+.box label {
+    display: block;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.box input {
+    display: none;
+}
+
+.box i {
+    height: 25px;
+    width: 25px;
+    border: 2px solid #FFF;
+    display: inline-block;
+    position: absolute;
+}
+
+input:checked ~ i {
+    height: 15px;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg)
+}
+
+.box span {
+    margin-left: 2.5rem;
+    font-size: 1.5rem;
+    position: relative;
+    display: inline-block;
+    transition: .3s;
+}
+
+.box span::before {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    background-color: #FFF;
+    transform: scale(0);
+    transform-origin: left;
+    opacity: .5;
+    transition: .3s;
+}
+
+input:checked ~ span {
+    color: #154E6B
+}
+
+input:checked ~ span::before {
+    transform: scale(1)
+}
